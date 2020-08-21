@@ -1,0 +1,16 @@
+<div class="background">
+    <div class="body">
+        <h1>Enter a price:</h1>
+        <span class="body__close"><a [routerLink]="['/AdminHeroPage']">&#88;</a></span>
+        <div class="bid-manual">
+            <form class="bid-manual-form" [formGroup]="bidingForm" (ngSubmit)="onBidSubmit()">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Enter a new price</mat-label>
+                    <input matInput formControlName="bidingPrice">
+                </mat-form-field>
+                <button mat-raised-button color="manual" class="header__btn header__btn--form" type="submit"
+                    [disabled]="!bidingForm.valid">Confirm price</button>
+            </form>
+        </div>
+    </div>
+</div>
